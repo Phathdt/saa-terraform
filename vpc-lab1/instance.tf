@@ -10,8 +10,8 @@ resource "aws_instance" "web-server" {
 
 
   tags = {
-    "Group" = "web-server"
-    Name    = "web-server-${count.index}"
+    Group = "web"
+    Name  = "web-server-${count.index}"
   }
 }
 
@@ -27,8 +27,8 @@ resource "aws_instance" "internal-server" {
 
 
   tags = {
-    "Group" = "internal-server"
-    Name    = "internal-${count.index}"
+    Group = "api"
+    Name  = "internal-${count.index}"
   }
 }
 
@@ -44,7 +44,7 @@ resource "aws_instance" "db-server" {
 
 
   tags = {
-    "Group" = "db-server"
-    Name    = "db-${count.index}"
+    Group = "db"
+    Name  = "db-${count.index}"
   }
 }
