@@ -23,7 +23,7 @@ resource "aws_instance" "internal-server" {
   key_name               = "phathdt973"
   availability_zone      = "ap-southeast-1a"
   private_ip             = var.private_ips_internal[count.index]
-  subnet_id              = aws_subnet.internal-api-subnet.id
+  subnet_id              = aws_subnet.api-subnet.id
 
 
   tags = {
